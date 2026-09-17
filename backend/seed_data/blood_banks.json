@@ -1,0 +1,85 @@
+[
+  {
+    "name": "Indian Red Cross Society - Delhi",
+    "address": "1, Red Cross Road, New Delhi",
+    "city": "New Delhi",
+    "latitude": 28.6328,
+    "longitude": 77.2197,
+    "phone": "+91-11-23358828",
+    "availability": [
+      {"blood_group": "A+", "status": "available", "units_available": 15},
+      {"blood_group": "B+", "status": "available", "units_available": 20},
+      {"blood_group": "O+", "status": "limited", "units_available": 5},
+      {"blood_group": "AB+", "status": "available", "units_available": 8}
+    ]
+  },
+  {
+    "name": "All India Institute of Medical Sciences",
+    "address": "Sri Aurobindo Marg, New Delhi",
+    "city": "New Delhi",
+    "latitude": 28.5672,
+    "longitude": 77.2100,
+    "phone": "+91-11-26588500",
+    "availability": [
+      {"blood_group": "A+", "status": "available", "units_available": 25},
+      {"blood_group": "B-", "status": "limited", "units_available": 3},
+      {"blood_group": "O-", "status": "available", "units_available": 12},
+      {"blood_group": "AB+", "status": "available", "units_available": 10}
+    ]
+  },
+  {
+    "name": "Blood Bank - Safdarjung Hospital",
+    "address": "Ansari Nagar, New Delhi",
+    "city": "New Delhi",
+    "latitude": 28.5708,
+    "longitude": 77.2082,
+    "phone": "+91-11-26165060",
+    "availability": [
+      {"blood_group": "A-", "status": "available", "units_available": 10},
+      {"blood_group": "B+", "status": "available", "units_available": 18},
+      {"blood_group": "O+", "status": "available", "units_available": 22},
+      {"blood_group": "AB-", "status": "unavailable", "units_available": 0}
+    ]
+  },
+  {
+    "name": "Rotary Blood Bank",
+    "address": "Sector 20, Dwarka, New Delhi",
+    "city": "New Delhi",
+    "latitude": 28.5921,
+    "longitude": 77.0460,
+    "phone": "+91-11-28081500",
+    "availability": [
+      {"blood_group": "A+", "status": "limited", "units_available": 4},
+      {"blood_group": "O+", "status": "available", "units_available": 16},
+      {"blood_group": "B-", "status": "available", "units_available": 7}
+    ]
+  },
+  {
+    "name": "Bombay Blood Bank",
+    "address": "Dadar, Mumbai",
+    "city": "Mumbai",
+    "latitude": 19.0178,
+    "longitude": 72.8478,
+    "phone": "+91-22-24145555",
+    "availability": [
+      {"blood_group": "A+", "status": "available", "units_available": 30},
+      {"blood_group": "B+", "status": "available", "units_available": 22},
+      {"blood_group": "O+", "status": "available", "units_available": 18},
+      {"blood_group": "AB-", "status": "limited", "units_available": 2}
+    ]
+  },
+  {
+    "name": "Tata Memorial Hospital Blood Bank",
+    "address": "Parel, Mumbai",
+    "city": "Mumbai",
+    "latitude": 19.0109,
+    "longitude": 72.8653,
+    "phone": "+91-22-24177000",
+    "availability": [
+      {"blood_group": "A+", "status": "available", "units_available": 35},
+      {"blood_group": "B+", "status": "available", "units_available": 28},
+      {"blood_group": "O-", "status": "available", "units_available": 15},
+      {"blood_group": "AB+", "status": "available", "units_available": 12}
+    ]
+  }
+]

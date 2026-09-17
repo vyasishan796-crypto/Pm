@@ -1,0 +1,17 @@
+INFO:     Started server process [15372]
+INFO:     Waiting for application startup.
+INFO:app.main:Starting Nexora Backend...
+INFO:app.main:Seeding database...
+INFO:app.main:Database seeded successfully!
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+INFO:     127.0.0.1:53930 - "GET / HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53930 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53930 - "POST /api/auth/register HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52371 - "GET /api/blood/search?blood_group=A%2B&city=New%20Delhi HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52371 - "POST /api/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52371 - "GET /api/admin/stats HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56313 - "POST /api/auth/login HTTP/1.1" 200 OK
+WARNING:app.rag.embeddings:Could not load sentence-transformers: No module named 'sentence_transformers'
+WARNING:app.rag.vector_store:ChromaDB not available: No module named 'chromadb'
+INFO:     127.0.0.1:56313 - "POST /api/ai/query HTTP/1.1" 200 OK
