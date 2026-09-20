@@ -1,9 +1,9 @@
-from pydantic import BaseModel, Field
+from pydantic import BaseModel
 from typing import Optional, List
 
 
 class AIQueryRequest(BaseModel):
-    question: str = Field(..., max_length=5000)
+    question: str
     language: str = "en"
 
 
