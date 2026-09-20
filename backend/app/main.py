@@ -10,6 +10,7 @@ from app.routers.blood import router as blood_router
 from app.routers.admin import router as admin_router
 from app.routers.users import router as users_router
 from app.routers.contact import router as contact_router
+from app.routers.translate import router as translate_router
 from app.core.security import hash_password
 
 logging.basicConfig(level=logging.INFO)
@@ -202,7 +203,12 @@ app = FastAPI(
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000", "http://localhost:3001"],
+    allow_origins=[
+        "http://localhost:3000",
+        "http://localhost:3001",
+        "https://frontend-umber-iota-21.vercel.app",
+        "https://frontend-qq1zt0cj7-vyasishan796-1264.vercel.app",
+    ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -214,6 +220,7 @@ app.include_router(blood_router)
 app.include_router(admin_router)
 app.include_router(users_router)
 app.include_router(contact_router)
+app.include_router(translate_router)
 
 
 @app.get("/")
