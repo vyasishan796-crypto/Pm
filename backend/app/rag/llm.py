@@ -184,7 +184,7 @@ and they should consult a qualified IP professional for specific legal matters."
                     "https://api.groq.com/openai/v1/chat/completions",
                     headers={"Authorization": f"Bearer {groq_api_key}"},
                     json={
-                        "model": "openai/gpt-oss-20b",  # Free tier, fast
+                        "model": "llama-3.3-70b-versatile",  # Free tier, 128k context
                         "messages": [
                             {"role": "system", "content": SYSTEM_PROMPT},
                             {"role": "user", "content": prompt},
