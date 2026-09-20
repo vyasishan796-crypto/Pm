@@ -54,7 +54,6 @@ def map_language(code: str) -> str:
 
 def mymemory_lang(code: str) -> str:
     """Map to MyMemory language codes"""
-    # MyMemory uses ISO 639-1 codes mostly
     return LANGUAGE_MAP.get(code, code)
 
 @router.post("", response_model=TranslateResponse)
@@ -84,11 +83,11 @@ async def translate_text(
     translated = None
     detected_lang = source_lang
 
-try:
+    try:
         source_mm = mymemory_lang(source_lang) if source_lang != "auto" else "en"
         target_mm = mymemory_lang(target_lang)
         lang_pair = f"{source_mm}|{target_mm}"
-        
+
         async with httpx.AsyncClient(timeout=30.0) as client:
             resp = await client.get(
                 MYMEMORY_URL,
@@ -99,10 +98,8 @@ try:
                 timeout=15.0,
             )
         if resp.status_code == 200:
-            # Read raw bytes and manually handle Unicode escapes
-            raw_bytes = resp.read()
-            text_content = raw_bytes.decode('utf-8')
-            # Manually decode Unicode escape sequences
+            # Use resp.text which handles encoding automatically
+            text_content = resp.text
             import json
             data = json.loads(text_content)
             response_data = data.get("responseData", {})

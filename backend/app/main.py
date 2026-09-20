@@ -208,6 +208,7 @@ app.add_middleware(
         "http://localhost:3001",
         "https://frontend-umber-iota-21.vercel.app",
         "https://frontend-qq1zt0cj7-vyasishan796-1264.vercel.app",
+        "https://frontend-ifx2y9kkw-vyasishan796-1264.vercel.app",
     ],
     allow_credentials=True,
     allow_methods=["*"],

@@ -2,8 +2,7 @@ import { defineRailway, project, service } from "railway/iac";
 
 export default defineRailway(() => {
   const web = service("web", {
-    builder: "NIXPACKS",
-    start: "python -m uvicorn app.main:app --host 0.0.0.0 --port $PORT",
+    builder: "DOCKERFILE",
     healthcheck: "/health",
     env: {
       DATABASE_URL: "sqlite:///./nexora.db",
@@ -11,7 +10,7 @@ export default defineRailway(() => {
     },
   });
 
-  return project("giving-nourishment", {
+  return project("nexora-backend", {
     resources: [web],
   });
 });
