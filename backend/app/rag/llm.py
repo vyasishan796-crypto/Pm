@@ -223,7 +223,7 @@ MEDICAL SAFETY: If this question involves medicine, health, dosage, or treatment
                     "https://api.groq.com/openai/v1/chat/completions",
                     headers={"Authorization": f"Bearer {groq_api_key}"},
                     json={
-                        "model": "llama-3.3-70b-versatile",  # Free tier, 128k context
+                        "model": "openai/gpt-oss-120b",  # 120B params, 131k context, 65k output
                         "messages": [
                             {"role": "system", "content": SYSTEM_PROMPT},
                             {"role": "user", "content": prompt},
