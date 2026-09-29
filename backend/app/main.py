@@ -12,9 +12,11 @@ from app.routers.users import router as users_router
 from app.routers.contact import router as contact_router
 from app.routers.translate import router as translate_router
 from app.core.security import hash_password
+from app.config import get_settings
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
+settings = get_settings()
 
 
 async def seed_data():
@@ -209,6 +211,7 @@ app.add_middleware(
         "https://frontend-umber-iota-21.vercel.app",
         "https://frontend-qq1zt0cj7-vyasishan796-1264.vercel.app",
         "https://frontend-ifx2y9kkw-vyasishan796-1264.vercel.app",
+        *settings.cors_origin_list,
     ],
     allow_credentials=True,
     allow_methods=["*"],

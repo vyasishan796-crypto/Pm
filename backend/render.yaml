@@ -7,8 +7,26 @@ services:
     startCommand: python -m uvicorn app.main:app --host 0.0.0.0 --port $PORT
     envVars:
       - key: DATABASE_URL
-        value: sqlite:///./nexora.db
+        value: sqlite+aiosqlite:///./nexora.db
       - key: SECRET_KEY
         generateValue: true
+      - key: ALGORITHM
+        value: HS256
+      - key: ACCESS_TOKEN_EXPIRE_MINUTES
+        value: "1440"
+      - key: LLM_PROVIDER
+        value: groq
+      - key: GROQ_MODEL
+        value: llama-3.3-70b-versatile
+      - key: OPENAI_MODEL
+        value: gpt-3.5-turbo
+      # Set these in the Render dashboard (Dashboard > Environment).
+      - key: GROQ_API_KEY
+        sync: false
+      - key: OPENAI_API_KEY
+        sync: false
+      # Comma-separated list of allowed frontend origins, e.g. https://your-app.vercel.app
+      - key: CORS_ORIGINS
+        sync: false
       - key: PYTHON_VERSION
         value: "3.11"
